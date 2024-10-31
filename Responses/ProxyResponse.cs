@@ -1,6 +1,6 @@
 namespace ZZZ.ApiModels.Responses;
 
-public class ProxyInfo {
+public class ProxyResponse {
 	public string Avatar { get; set; } = string.Empty;
 	
 }
