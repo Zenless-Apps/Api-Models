@@ -19,7 +19,8 @@ public enum DiscStats {
 	AnomalyProficiency = 31203,
 	AnomalyMastery = 31402,
 	PhysicalDmg = 31503,
+	FireDmg = 31603,
 	IceDmg = 31703,
 	ElectricDmg = 31803,
-	EtherDmg = 31903
+	EtherDmg = 31903,
 }
