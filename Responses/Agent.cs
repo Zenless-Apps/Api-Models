@@ -47,13 +47,13 @@ public class Agent {
 	
 	public class Disc {
 		
-		public int Id { get; set; }
+		public Discs Id { get; set; }
 		
 		public int Level { get; set; }
 		
 		public required string Name { get; set; }
 		
-		public required string Rank { get; set; }
+		public required ItemRank Rank { get; set; }
 		
 		public int Slot { get; set; }
 		
@@ -62,7 +62,7 @@ public class Agent {
 		public required Stat[] SubStats { get; set; }
 		
 		public class Stat {
-			public int Id { get; set; }
+			public DiscStats Id { get; set; }
 			public required string Name { get; set; }
 			public required string Value { get; set; }
 		}
