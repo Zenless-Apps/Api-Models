@@ -1,7 +1,5 @@
 namespace ZZZ.ApiModels.Responses;
 
-using System.Text.Json.Nodes;
-
 public class Agent {
 
 	public int Id { get; set; }

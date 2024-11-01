@@ -10,11 +10,11 @@ public class ApiResponse <T> {
 	public string Message { get; set; } = string.Empty;
 	
 	[JsonPropertyName("retcode")]
-	public int RetCode { get; set; }
+	public ApiCode RetCode { get; set; }
 }
 
 public class ApiResponse : ApiResponse<JsonObject> {
-	public static ApiResponse<T> Error<T>(string message, int code = 1) {
+	public static ApiResponse<T> Error<T>(string message, ApiCode code = ApiCode.Error) {
 		return new ApiResponse<T> {
 			Data = default,
 			RetCode = code,
@@ -22,7 +22,7 @@ public class ApiResponse : ApiResponse<JsonObject> {
 		};
 	}
 	
-	public static ApiResponse<T> With<T>(T data, string message = "OK", int code = 0) {
+	public static ApiResponse<T> With<T>(T data, string message = "OK", ApiCode code = ApiCode.Ok) {
 		return new ApiResponse<T> {
 			Data = data,
 			RetCode = code,
