@@ -3,7 +3,7 @@ namespace ZZZ.ApiModels.Responses;
 
 public class Agent {
 
-	public int Id { get; init; }
+	public Agents Id { get; init; }
 
 	public int Level { get; init; }
 
