@@ -12,8 +12,8 @@ namespace ZZZ.ApiModels
         
 		GameBall = -3,
 		TheVault = 13103,
-		SliceOfTime = -4,
-		Kaboom = -5,
+		SliceOfTime = 13002,
+		Kaboom = 13115,
 		BashfulDemon = 13113,
         
 		Cradle = 14121,
@@ -25,7 +25,7 @@ namespace ZZZ.ApiModels
 		Decrescent = -8,
         
 		Superstar = -9,
-		StarlightReplica = -10,
+		StarlightReplica = 13108,
 		Starlight = 13004,
 		Housekeeper = 13106,
 		Blossom = 13013,
@@ -33,7 +33,7 @@ namespace ZZZ.ApiModels
 		Cannon = -11,
         
 		Brimstone = -12,
-		Cushion = -13,
+		Cushion = 14102,
 		Suppressor = -14,
 		DeepSea = 14119,
 		#endregion
@@ -42,7 +42,7 @@ namespace ZZZ.ApiModels
 		Inflection = -15,
 		Base = -16,
         
-		Spring = -17,
+		Spring = 13011,
 		Peacekeeper = 13127,
 		Transmorpher = -18,
 		Bunny = -19,
@@ -57,8 +57,8 @@ namespace ZZZ.ApiModels
 		Alpha = -24,
         
 		Gemini = 13008,
-		Roaring = -25,
-		Rainforest = -26,
+		Roaring = 13128,
+		Rainforest = 13003,
 		ElectroLip = -27,
         
 		Stinger = -28,
@@ -70,14 +70,14 @@ namespace ZZZ.ApiModels
 		Hatchet = -30,
 		Arrow = -31,
         
-		Steam = -32,
+		Steam = 13005,
 		Shooter = 14003,
-		Rock = -33,
-		Battery = -34,
+		Rock = 13006,
+		Battery = 13101,
         
 		Restrained = -35,
 		Teapot = 14125,
-		Hellfire = -36
+		Hellfire = 14110
 		#endregion
 	}
 }

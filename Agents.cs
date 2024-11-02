@@ -4,29 +4,30 @@ namespace ZZZ.ApiModels;
 /// List of agents available in the game.
 /// </summary>
 public enum Agents {
-	Rina = -1,
-	Nicole = -2,
-	Lucy = -3,
-	Soukaku = -4,
+	Rina = 1211,
+	Nicole = 1031,
+	Lucy = 1151,
+	Soukaku = 1131,
 
-	Anby = -5,
-	Koleda = -6,
-	Qingyi = -7,
-	Lycaon = -8,
+	Anby = 1011,
+	Koleda = 1101,
+	Qingyi = 1251,
+	Lycaon = 1141,
 
-	Ben = -9,
-	Seth = -10,
-	Caesar = -11,
+	Ben = 1121,
+	Seth = 1271,
+	Caesar = 1071,
 
-	Grace = -12,
-	Jane = -13,
-	Piper = -14,
+	Grace = 1181,
+	Jane = 1261,
+	Piper = 1281,
+	Burnice = 1171,
 
-	Anton = -15,
-	Billy = -16,
-	Corin = -17,
-	Ellen = -18,
-	Nekomata = -19,
-	N11 = -20,
-	ZhuYuan = -21
+	Anton = 1111,
+	Billy = 1081,
+	Corin = 1061,
+	Ellen = 1191,
+	Nekomata = 1021,
+	N11 = 1041,
+	ZhuYuan = 1241
 }
