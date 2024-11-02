@@ -1,5 +1,7 @@
 namespace ZZZ.ApiModels.Responses;
 
+using System.Text.Json.Nodes;
+
 public class Agent {
 
 	public int Id { get; set; }
@@ -38,9 +40,11 @@ public class Agent {
 	
 	public class Skill {
 		
-		public int Id { get; set; }
+		public Skills Id { get; set; }
 		
 		public int Level { get; set; }
+
+		public required string Title { get; set; }
 	}
 	
 	public required Disc[] Discs { get; set; }
