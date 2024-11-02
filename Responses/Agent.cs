@@ -60,7 +60,7 @@ public class Agent {
 		
 		public int Slot { get; init; }
 		
-		public required Stat MainStat { get; init; }
+		public required Stat? MainStat { get; init; }
 		
 		public required Stat[] SubStats { get; init; }
 		
