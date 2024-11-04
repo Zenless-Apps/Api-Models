@@ -19,5 +19,8 @@ using Responses;
  */
 [JsonSerializable(typeof(ApiResponse<Agent>[]))]
 [JsonSerializable(typeof(ApiResponse<Proxy>[]))]
+[JsonSerializable(typeof(ApiResponse<HoyolabUser>[]))]
+[JsonSerializable(typeof(ApiResponse<bool?>))]
 [JsonSerializable(typeof(ApiResponse[]))]
+
 public partial class ZenlessApiJsonContext : JsonSerializerContext {}
