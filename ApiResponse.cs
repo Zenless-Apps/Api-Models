@@ -13,6 +13,8 @@ public class ApiResponse <T> {
 	public ApiCode RetCode { get; set; }
 }
 
+public class ApiErrorResponse : ApiResponse<bool?>;
+
 public class ApiResponse : ApiResponse<JsonObject> {
 	public static ApiResponse<T> Error<T>(string message, ApiCode code = ApiCode.Error) {
 		return new()
@@ -23,10 +25,9 @@ public class ApiResponse : ApiResponse<JsonObject> {
 		};
 	}
 	
-	public static ApiResponse<bool?> Error(string message, ApiCode code = ApiCode.Error) {
+	public static ApiErrorResponse Error(string message, ApiCode code = ApiCode.Error) {
 		return new()
 		{
-			Data = null,
 			RetCode = code,
 			Message = message
 		};

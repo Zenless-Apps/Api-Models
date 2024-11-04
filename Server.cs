@@ -2,8 +2,10 @@
 namespace ZZZ.ApiModels;
 
 using System.ComponentModel;
+using System.Text.Json.Serialization;
 
-public enum Server {
+[JsonConverter(typeof(JsonStringEnumConverter<Server>))]
+public enum Server : sbyte {
 	Auto = -1,
 	[Description("prod_gf_us")]
 	America,

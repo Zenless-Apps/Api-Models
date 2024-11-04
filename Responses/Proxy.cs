@@ -6,6 +6,8 @@ public class Proxy {
 	
 	public uint Uid { get; set; }
 	
+	public Server Server { get; set; }
+	
 	public uint? HoyolabId { get; set; }
 	
 	[MaxLength(250)]
