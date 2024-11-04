@@ -7,7 +7,7 @@ public enum UidType {
 	/**
 	 * Unique identifier for a proxy of Zenless Zone Zero.
 	 */
-	Proxy,
+	Proxy = 1,
 	/**
 	 * Unique identifier for a hoyolab user.
 	 */

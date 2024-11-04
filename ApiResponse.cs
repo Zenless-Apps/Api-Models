@@ -15,8 +15,18 @@ public class ApiResponse <T> {
 
 public class ApiResponse : ApiResponse<JsonObject> {
 	public static ApiResponse<T> Error<T>(string message, ApiCode code = ApiCode.Error) {
-		return new ApiResponse<T> {
+		return new()
+		{
 			Data = default,
+			RetCode = code,
+			Message = message
+		};
+	}
+	
+	public static ApiResponse<bool?> Error(string message, ApiCode code = ApiCode.Error) {
+		return new()
+		{
+			Data = null,
 			RetCode = code,
 			Message = message
 		};

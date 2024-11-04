@@ -8,6 +8,7 @@ public class Proxy {
 	
 	public uint? HoyolabId { get; set; }
 	
+	[MaxLength(250)]
 	public string Avatar { get; set; } = string.Empty;
 	
 	[MaxLength(50)]

@@ -8,7 +8,11 @@ public class HoyolabUser {
 	
 	public uint? ZenlessId { get; set; }
 	
+	[MaxLength(250)]
 	public string Avatar { get; set; } = string.Empty;
+	
+	[MaxLength(250)]
+	public string Pendant { get; set; } = string.Empty;
 	
 	[MaxLength(20)]
 	public string Name { get; set; } = string.Empty;
