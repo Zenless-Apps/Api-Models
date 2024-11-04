@@ -1,12 +1,20 @@
 // ReSharper disable UnusedAutoPropertyAccessor.Global
 namespace ZZZ.ApiModels.Responses;
 
+using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
 public class Agent {
+	public uint ProxyUid { get; init; }
+	
+	[JsonIgnore]
+	public Proxy Proxy { get; init; } = null!;
+	
+	public uint Uid { get; init; }
+	
 	readonly int _level;
-
-	public Agents Id { get; init; }
+	
+	public required Agents Id { get; init; }
 
 	[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
 	public int Level
@@ -15,7 +23,7 @@ public class Agent {
 		init
 		{
 			_level = value;
-			Ascension = A(_level);
+			if (value > 0) Ascension = A(_level);
 		}
 	}
 
@@ -43,9 +51,12 @@ public class Agent {
 
 	public Weapon? Engine { get; init; }
 
+	[MaxLength(30)]
 	public required string Name { get; init; }
 
 	public class Weapon {
+		public uint Uid { get; init; }
+		
 		readonly int _level;
 		
 		public Engines Id { get; init; }
@@ -57,64 +68,59 @@ public class Agent {
 			init
 			{
 				_level = value;
-				Ascension = A(_level);
+				if (value > 0) Ascension = A(_level);
 			}
 		}
 
-
-		public int Refinement { get; init; }
-
+		public int Refinement { get; init; } = 1;
+		
+		[MaxLength(30)]
 		public required string Name { get; init; }
-
+		
 		public AscensionState Ascension { get; set; }
 	}
 
-	[Obsolete("Use Cinema instead")]
-	public Mindscape[] Cinemas { get; init; } = [];
-
-	[Obsolete("This class is redundant, use Cinema instead")]
-	public class Mindscape {
-
-		public int Id { get; init; }
-
-		public int Pos { get; init; }
-
-		public bool Unlocked { get; init; }
-	}
-
-	public required Skill[] Skills { get; init; }
+	public required List<Skill> Skills { get; init; }
 
 	public class Skill {
 
+		public uint Uid { get; init; }
+		
 		public Skills Id { get; init; }
 
 		public int Level { get; init; }
-
-		public required string Title { get; init; }
+		
+		public string Title { get; init; } = "Unknown";
 	}
 
-	public required Disc[] Discs { get; init; }
+	public required List<Disc> Discs { get; init; }
 
 	public class Disc {
+		public uint Uid { get; init; }
+		
+		public required Discs Id { get; init; }
 
-		public Discs Id { get; init; }
+		public required int Level { get; init; }
 
-		public int Level { get; init; }
-
-		public required string Name { get; init; }
+		[MaxLength(30)]
+		public string Name { get; init; } = "Unknown";
 
 		public required ItemRank Rank { get; init; }
 
-		public int Slot { get; init; }
+		public required int Slot { get; init; }
 
 		public required Stat? MainStat { get; init; }
 
-		public required Stat[] SubStats { get; init; }
+		public required List<Stat> SubStats { get; init; }
 
 		public class Stat {
-			public DiscStats Id { get; init; }
-
-			public required string Name { get; init; }
+			
+			public uint Uid { get; init; }
+			
+			public required DiscStats Id { get; init; }
+			
+			[MaxLength(30)]
+			public string Name { get; init; } = "Unknown";
 
 			public required string Value { get; init; }
 

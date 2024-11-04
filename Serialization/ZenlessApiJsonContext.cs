@@ -9,7 +9,9 @@ using Responses;
 [JsonSerializable(typeof(Agent.Disc[]))]
 [JsonSerializable(typeof(Agent.Disc.Stat[]))]
 [JsonSerializable(typeof(Agent.Skill[]))]
-[JsonSerializable(typeof(Agent.Mindscape[]))]
+[JsonSerializable(typeof(List<Agent.Disc>))]
+[JsonSerializable(typeof(List<Agent.Disc.Stat>))]
+[JsonSerializable(typeof(List<Agent.Skill>))]
 
 [JsonSerializable(typeof(Proxy[]))]
 [JsonSerializable(typeof(HoyolabUser[]))]

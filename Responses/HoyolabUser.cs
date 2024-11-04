@@ -1,12 +1,15 @@
 namespace ZZZ.ApiModels.Responses;
 
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 public class HoyolabUser {
 	
 	public uint Uid { get; set; }
 	
-	public uint? ZenlessId { get; set; }
+	public uint? ProxyUid { get; set; }
+	
+	public Proxy? Proxy { get; set; }
 	
 	[MaxLength(250)]
 	public string Avatar { get; set; } = string.Empty;
