@@ -1,12 +1,16 @@
+// ReSharper disable InconsistentNaming
 namespace ZZZ.ApiModels;
 
 using System.ComponentModel;
 
 public enum Server {
+	Auto = -1,
 	[Description("prod_gf_us")]
 	America,
 	[Description("prod_gf_jp")]
 	Asia,
 	[Description("prod_gf_eu")]
-	Europe
+	Europe,
+	[Description("prod_gf_sg")]
+	TW_HK_MO,
 }

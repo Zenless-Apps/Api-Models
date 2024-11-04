@@ -2,16 +2,17 @@ namespace ZZZ.ApiModels.Responses;
 
 using System.ComponentModel.DataAnnotations;
 
-public class Proxy {
+public class HoyolabUser {
 	
 	public uint Uid { get; set; }
 	
-	public uint? HoyolabId { get; set; }
+	public uint? ZenlessId { get; set; }
 	
 	public string Avatar { get; set; } = string.Empty;
 	
-	[MaxLength(50)]
+	[MaxLength(20)]
 	public string Name { get; set; } = string.Empty;
 	
-	public int Level { get; set; }
+	[MaxLength(200)]
+	public string Bio { get; set; } = string.Empty;
 }
