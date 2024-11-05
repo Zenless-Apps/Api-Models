@@ -8,6 +8,7 @@ namespace ZZZ.ApiModels;
 public enum ApiCode {
 	Ok = 0,
 	Error = 1,
+	UnknownError = -500,
 	SignInError = 2001,
 	UidNotFound = -500001,
 	PrivateProfile = -501000,
