@@ -1,11 +1,15 @@
 namespace ZZZ.ApiModels;
 
 /// <summary>
-/// Stats that a disc can have either as main stat or sub stat.
+/// Stats that a disc or engine can have either as main stat or sub stat.
 /// </summary>
-public enum DiscStats {
+public enum AgentStats {
 	HpPercent = 11102,
 	Hp = 11103,
+	/// <summary>
+	/// Used only for weapons as main stat.
+	/// </summary>
+	BaseAtk = 12101,
 	AtkPercent = 12102,
 	Atk = 12103,
 	Impact = 12202,

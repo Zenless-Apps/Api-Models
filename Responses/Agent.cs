@@ -1,20 +1,21 @@
 // ReSharper disable UnusedAutoPropertyAccessor.Global
 namespace ZZZ.ApiModels.Responses;
 
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
 public class Agent {
-	public uint ProxyUid { get; init; }
+	public uint ProxyUid { get; set; }
 	
 	[JsonIgnore]
-	public Proxy Proxy { get; init; } = null!;
+	public Proxy Proxy { get; set; } = null!;
 	
-	public uint Uid { get; init; }
+	public uint Uid { get; set; }
 	
 	readonly int _level;
 	
-	public required Agents Id { get; init; }
+	public required Agents Id { get; set; }
 
 	[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
 	public int Level
@@ -45,21 +46,31 @@ public class Agent {
 		};
 	}
 
-	public AscensionState Ascension { get; init; }
+	public AscensionState Ascension { get; set; }
 
-	public int Cinema { get; init; }
+	public int Cinema { get; set; }
 
-	public Weapon? Engine { get; init; }
+	public Weapon? Engine { get; set; }
 
 	[MaxLength(30)]
-	public required string Name { get; init; }
+	public required string Name { get; set; }
+
+	public List<Property> Properties { get; set; } = [];
+	
+	public class Property {
+		public required string Name { get; set; }
+		public required int Id { get; set; }
+		public double Base { get; set; }
+		public double Add { get; set; }
+		public double Final { get; set; }
+	}
 
 	public class Weapon {
-		public uint Uid { get; init; }
+		public uint Uid { get; set; }
 		
 		readonly int _level;
 		
-		public Engines Id { get; init; }
+		public Engines Id { get; set; }
 
 		[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
 		public int Level
@@ -72,59 +83,66 @@ public class Agent {
 			}
 		}
 
-		public int Refinement { get; init; } = 1;
+		public int Refinement { get; set; } = 1;
 		
 		[MaxLength(30)]
-		public required string Name { get; init; }
+		public required string Name { get; set; }
 		
 		public AscensionState Ascension { get; set; }
+		
+		public required Stat MainStat { get; set; }
+		
+		public required Stat SubStat { get; set; }
 	}
 
-	public required List<Skill> Skills { get; init; }
+	public required List<Skill> Skills { get; set; }
 
 	public class Skill {
 
-		public uint Uid { get; init; }
+		public uint Uid { get; set; }
 		
-		public Skills Id { get; init; }
+		public Skills Id { get; set; }
 
-		public int Level { get; init; }
+		public int Level { get; set; }
 		
-		public string Title { get; init; } = "Unknown";
+		public string Title { get; set; } = "Unknown";
 	}
 
-	public required List<Disc> Discs { get; init; }
+	public required List<Disc> Discs { get; set; }
 
 	public class Disc {
-		public uint Uid { get; init; }
+		public uint Uid { get; set; }
 		
-		public required Discs Id { get; init; }
+		public required Discs Id { get; set; }
 
-		public required int Level { get; init; }
+		public required int Level { get; set; }
 
 		[MaxLength(30)]
-		public string Name { get; init; } = "Unknown";
+		public string Name { get; set; } = "Unknown";
 
-		public required ItemRank Rank { get; init; }
+		public required ItemRank Rank { get; set; }
 
-		public required int Slot { get; init; }
+		public required int Slot { get; set; }
 
-		public required Stat? MainStat { get; init; }
+		public required Stat? MainStat { get; set; }
 
-		public required List<Stat> SubStats { get; init; }
-
-		public class Stat {
+		public required List<Stat> SubStats { get; set; }
+		
+	}
+	
+	public class Stat {
 			
-			public uint Uid { get; init; }
+		public uint Uid { get; set; }
 			
-			public required DiscStats Id { get; init; }
+		public required AgentStats Id { get; set; }
 			
-			[MaxLength(30)]
-			public string Name { get; init; } = "Unknown";
+		[MaxLength(30)]
+		public string Name { get; set; } = "Unknown";
 
-			public required string Value { get; init; }
-
-			public int Rolls { get; init; } = -1;
-		}
+		public required string Value { get; set; }
+			
+		[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
+		[DefaultValue(-1)]
+		public int Rolls { get; set; } = -1;
 	}
 }
