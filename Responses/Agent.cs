@@ -98,9 +98,6 @@ public class Agent {
 	public required List<Skill> Skills { get; set; }
 
 	public class Skill {
-
-		public uint Uid { get; set; }
-		
 		public Skills Id { get; set; }
 
 		public int Level { get; set; }
@@ -131,9 +128,6 @@ public class Agent {
 	}
 	
 	public class Stat {
-			
-		public uint Uid { get; set; }
-			
 		public required AgentStats Id { get; set; }
 			
 		[MaxLength(30)]
