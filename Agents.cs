@@ -1,5 +1,5 @@
 namespace ZZZ.ApiModels;
-
+	
 /// <summary>
 /// List of agents available in the game.
 /// </summary>

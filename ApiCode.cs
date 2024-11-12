@@ -15,5 +15,5 @@ public enum ApiCode {
 	HoyolabError = -102030,
 	InvalidUidType = -120030,
 	InvalidUid = -123000,
-
+	AgentNotFound = -123003
 }

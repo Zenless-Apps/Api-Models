@@ -24,6 +24,7 @@ using Responses;
  * Api response models
  */
 [JsonSerializable(typeof(ApiResponse<Agent>[]))]
+[JsonSerializable(typeof(ApiResponse<Agents[]>[]))]
 [JsonSerializable(typeof(ApiResponse<Proxy>[]))]
 [JsonSerializable(typeof(ApiResponse<HoyolabUser>[]))]
 [JsonSerializable(typeof(ApiErrorResponse[]))]
