@@ -20,5 +20,7 @@ public class Proxy {
 	
 	public int Level { get; set; }
 	
+	public DateTime LastUpdate { get; set; }
+	
 	public List<Agent> Agents { get; set; } = [];
 }

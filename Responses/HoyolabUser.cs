@@ -21,4 +21,6 @@ public class HoyolabUser {
 	
 	[MaxLength(200)]
 	public string Bio { get; set; } = string.Empty;
+	
+	public DateTime LastUpdate { get; set; }
 }

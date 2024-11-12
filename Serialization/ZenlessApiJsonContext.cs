@@ -18,6 +18,8 @@ using Responses;
 [JsonSerializable(typeof(Proxy[]))]
 [JsonSerializable(typeof(HoyolabUser[]))]
 
+[JsonSerializable(typeof(DateTime[]))]
+
 /*
  * Api response models
  */

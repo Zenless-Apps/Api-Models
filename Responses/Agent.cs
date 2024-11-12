@@ -16,6 +16,8 @@ public class Agent {
 	readonly int _level;
 	
 	public required Agents Id { get; set; }
+	
+	public DateTime LastUpdate { get; set; }
 
 	[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
 	public int Level
@@ -93,6 +95,8 @@ public class Agent {
 		public required Stat MainStat { get; set; }
 		
 		public required Stat SubStat { get; set; }
+		
+		public DateTime LastUpdate { get; set; }
 	}
 
 	public required List<Skill> Skills { get; set; }
@@ -125,6 +129,7 @@ public class Agent {
 
 		public required List<Stat> SubStats { get; set; }
 		
+		public DateTime LastUpdate { get; set; }
 	}
 	
 	public class Stat {
