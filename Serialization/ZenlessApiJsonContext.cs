@@ -7,11 +7,11 @@ using Responses;
 [JsonSerializable(typeof(Agent[]))]
 [JsonSerializable(typeof(Agent.Weapon[]))]
 [JsonSerializable(typeof(Agent.Disc[]))]
-[JsonSerializable(typeof(Agent.Stat[]))]
+[JsonSerializable(typeof(Agent.MainStat[]))]
 [JsonSerializable(typeof(Agent.Skill[]))]
 [JsonSerializable(typeof(Agent.Property[]))]
 [JsonSerializable(typeof(List<Agent.Disc>))]
-[JsonSerializable(typeof(List<Agent.Stat>))]
+[JsonSerializable(typeof(List<Agent.MainStat>))]
 [JsonSerializable(typeof(List<Agent.Skill>))]
 [JsonSerializable(typeof(List<Agent.Property>))]
 

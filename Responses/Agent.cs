@@ -92,9 +92,9 @@ public class Agent {
 		
 		public AscensionState Ascension { get; set; }
 		
-		public required Stat MainStat { get; set; }
+		public required MainStat MainStat { get; set; }
 		
-		public required Stat SubStat { get; set; }
+		public required MainStat SubMainStat { get; set; }
 		
 		public DateTime LastUpdate { get; set; }
 	}
@@ -125,14 +125,14 @@ public class Agent {
 
 		public required int Slot { get; set; }
 
-		public required Stat? MainStat { get; set; }
+		public required MainStat? MainStat { get; set; }
 
-		public required List<Stat> SubStats { get; set; }
+		public required List<MainStat> SubStats { get; set; }
 		
 		public DateTime LastUpdate { get; set; }
 	}
 	
-	public class Stat {
+	public class MainStat {
 		public required AgentStats Id { get; set; }
 			
 		[MaxLength(30)]
