@@ -17,5 +17,7 @@ public enum Discs {
 	ChaoticMetal = 323,
 	ThunderMetal = 324,
 	PolarMetal = 325,
-	FangedMetal = 326
+	FangedMetal = 326,
+	BranchBladeSong = 327,
+	AstralVoice = 328,
 }
