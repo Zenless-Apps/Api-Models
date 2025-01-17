@@ -141,7 +141,7 @@ public class Agent {
 		public required string Value { get; set; }
 			
 		[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
-		[DefaultValue(-1)]
-		public int Rolls { get; set; } = -1;
+		[DefaultValue(0)]
+		public int Rolls { get; set; } = 0;
 	}
 }

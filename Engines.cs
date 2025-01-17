@@ -29,6 +29,7 @@ namespace ZZZ.ApiModels {
 		Blossom = 13013,
 		Drill = 13111,
 		Cannon = -11,
+		MarcatoDesire = -13,
 
 		Brimstone = -12,
 		Cushion = 14102,
