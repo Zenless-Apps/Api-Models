@@ -4,8 +4,8 @@ namespace ZZZ.ApiModels;
 using System.ComponentModel.DataAnnotations;
 
 public enum AscensionState {
-	[Display(Description = "0/10")]
-	A0_10,
+	[Display(Description = "1/10")]
+	A1_10,
 	[Display(Description = "10/10")]
 	A10_10,
 	[Display(Description = "10/20")]

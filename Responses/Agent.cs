@@ -44,7 +44,7 @@ public class Agent {
 			20 => AscensionState.A20_20,
 			> 10 => AscensionState.A10_20,
 			10 => AscensionState.A10_10,
-			_ => AscensionState.A0_10
+			_ => AscensionState.A1_10
 		};
 	}
 

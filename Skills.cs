@@ -12,7 +12,7 @@ public enum Skills
 	 */
 	Ex = -5,
 	Dash,
-	Chain,
+	Ultimate,
 	Additional,
 	Quick,
 	
@@ -22,7 +22,7 @@ public enum Skills
 	Basic = 0,
 	Special,
 	Dodge,
-	Ultimate,
+	Chain,
 	Core = 5,
 	Assist,
 }
