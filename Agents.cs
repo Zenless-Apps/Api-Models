@@ -8,6 +8,7 @@ public enum Agents {
 	Nicole = 103,
 	Lucy = 115,
 	Soukaku = 113,
+	Astra = 131,
 
 	Anby = 101,
 	Koleda = 110,
